@@ -1,0 +1,6 @@
+D:\Visual Studio Projects\LeashMod\LeashMod\obj\Free\LeashMod.csprojAssemblyReference.cache
+D:\Visual Studio Projects\LeashMod\LeashMod\obj\Free\LeashMod.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\LeashMod\LeashMod\bin\Free\LeashMod.dll
+D:\Visual Studio Projects\LeashMod\LeashMod\bin\Free\LeashMod.pdb
+D:\Visual Studio Projects\LeashMod\LeashMod\obj\Free\LeashMod.dll
+D:\Visual Studio Projects\LeashMod\LeashMod\obj\Free\LeashMod.pdb

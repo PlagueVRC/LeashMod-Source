@@ -1,0 +1,2093 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spreads.Utf8Json</name>
+    </assembly>
+    <members>
+        <member name="M:Spreads.Serialization.Utf8Json.Formatters.EnumFormatter`1.#ctor(Spreads.Serialization.Utf8Json.JsonSerializeAction{`0},Spreads.Serialization.Utf8Json.JsonDeserializeFunc{`0})">
+            <summary>
+            If can not use dynamic code-generation environment and want to avoid boxing, you can set func manually.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Get MethodInfo from Expression for Static(with result) method.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo(System.Linq.Expressions.Expression{System.Action})">
+            <summary>
+            Get MethodInfo from Expression for Static(void) method.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Get MethodInfo from Expression for Instance(with result) method.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo``1(System.Linq.Expressions.Expression{System.Action{``0}})">
+            <summary>
+            Get MethodInfo from Expression for Instance(void) method.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo``2(System.Linq.Expressions.Expression{System.Action{``0,``1}})">
+            <summary>
+            Get MethodInfo from Expression for Instance(void) method.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ExpressionUtility.GetMethodInfo``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+            <summary>
+            Get MethodInfo from Expression for Instance(with result) method.
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions">
+            <summary>
+            Provides optimized generation code and helpers.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitLdloc(System.Reflection.Emit.ILGenerator,System.Int32)">
+            <summary>
+            Loads the local variable at a specific index onto the evaluation stack.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitStloc(System.Reflection.Emit.ILGenerator,System.Int32)">
+            <summary>
+            Pops the current value from the top of the evaluation stack and stores it in a the local variable list at a specified index.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitLdloca(System.Reflection.Emit.ILGenerator,System.Int32)">
+            <summary>
+            Loads the address of the local variable at a specific index onto the evaluation statck.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitLdc_I4(System.Reflection.Emit.ILGenerator,System.Int32)">
+            <summary>
+            Pushes a supplied value of type int32 onto the evaluation stack as an int32.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitPop(System.Reflection.Emit.ILGenerator,System.Int32)">
+            <summary>
+            Helper for Pop op.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.Emit.ILGeneratorExtensions.EmitIncrementFor(System.Reflection.Emit.ILGenerator,System.Reflection.Emit.LocalBuilder,System.Action{System.Reflection.Emit.LocalBuilder})">
+            <summary>for  var i = 0, i ..., i++ </summary>
+        </member>
+        <member name="T:Spreads.Serialization.Utf8Json.Internal.NumberConverter">
+            <summary>
+            zero-allocate itoa, dtoa, atoi, atod converters.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.NumberConverter.IsNumber(System.Byte)">
+            <summary>
+            0 ~ 9
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.NumberConverter.IsNumberRepresentation(System.Byte)">
+            <summary>
+            Is 0 ~ 9, '.', '+', '-'?
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.StringMutator.Original(System.String)">
+            <summary>
+            MyProperty -> MyProperty
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.StringMutator.ToCamelCase(System.String)">
+            <summary>
+            MyProperty -> myProperty
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.Internal.StringMutator.ToSnakeCase(System.String)">
+            <summary>
+            MyProperty -> my_property
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.SkipWhiteSpace">
+            <summary>
+            Returns true if still in range after skipping ws
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.ReadIsInArray(System.Int32@)">
+            <summary>
+            Convinient pattern of ReadIsBeginArrayWithVerify + while(!ReadIsEndArrayWithSkipValueSeparator)
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.ReadIsInObject(System.Int32@)">
+            <summary>
+            Convinient pattern of ReadIsBeginObjectWithVerify + while(!ReadIsEndObjectWithSkipValueSeparator)
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.ReadPropertyName">
+            <summary>ReadString + ReadIsNameSeparatorWithVerify</summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.ReadStringSegmentRaw">
+            <summary>Get raw string-span(do not unescape)</summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonReader.ReadPropertyNameSegmentRaw">
+            <summary>Get raw string-span(do not unescape) + ReadIsNameSeparatorWithVerify</summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonParsingException.GetUnderlyingByteArrayUnsafe">
+            <summary>
+            Underlying bytes is may be a pooling buffer, be careful to use it. If lost reference or can not handled byte[], return null.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonParsingException.GetUnderlyingStringUnsafe">
+            <summary>
+            Underlying bytes is may be a pooling buffer, be careful to use it. If lost reference or can not handled byte[], return null.
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.Utf8Json.JsonSerializer">
+            <summary>
+            High-Level API of Utf8Json.
+            </summary>
+        </member>
+        <member name="P:Spreads.Serialization.Utf8Json.JsonSerializer.DefaultResolver">
+            <summary>
+            FormatterResolver that used resolver less overloads. If does not set it, used StandardResolver.Default.
+            </summary>
+        </member>
+        <member name="P:Spreads.Serialization.Utf8Json.JsonSerializer.IsInitialized">
+            <summary>
+            Is resolver decided?
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.SetDefaultResolver(Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Set default resolver of Utf8Json APIs.
+            </summary>
+            <param name="resolver"></param>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.Serialize``1(``0)">
+            <summary>
+            Serialize to binary with default resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.Serialize``1(``0,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.Serialize``1(System.IO.Stream,``0)">
+            <summary>
+            Serialize to stream.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.Serialize``1(System.IO.Stream,``0,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.SerializeAsync``1(System.IO.Stream,``0)">
+            <summary>
+            Serialize to stream(write async).
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.SerializeAsync``1(System.IO.Stream,``0,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream(write async) with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.SerializeUnsafe``1(``0)">
+            <summary>
+            Serialize to binary. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.SerializeUnsafe``1(``0,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.ToJsonString``1(``0)">
+            <summary>
+            Serialize to JsonString.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.ToJsonString``1(``0,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to JsonString with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Object)">
+            <summary>
+            Serialize to binary with default resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Type,System.Object)">
+            <summary>
+            Serialize to binary with default resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Type,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.IO.Stream,System.Object)">
+            <summary>
+            Serialize to stream.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Type,System.IO.Stream,System.Object)">
+            <summary>
+            Serialize to stream.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.IO.Stream,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.Serialize(System.Type,System.IO.Stream,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeAsync(System.IO.Stream,System.Object)">
+            <summary>
+            Serialize to stream.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeAsync(System.Type,System.IO.Stream,System.Object)">
+            <summary>
+            Serialize to stream.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeAsync(System.IO.Stream,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeAsync(System.Type,System.IO.Stream,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to stream with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeUnsafe(System.Object)">
+            <summary>
+            Serialize to binary. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeUnsafe(System.Type,System.Object)">
+            <summary>
+            Serialize to binary. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeUnsafe(System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.SerializeUnsafe(System.Type,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to binary with specified resolver. Get the raw memory pool byte[]. The result can not share across thread and can not hold, so use quickly.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.ToJsonString(System.Object)">
+            <summary>
+            Serialize to JsonString.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.ToJsonString(System.Type,System.Object)">
+            <summary>
+            Serialize to JsonString.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.ToJsonString(System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to JsonString with specified resolver.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonSerializer.NonGeneric.ToJsonString(System.Type,System.Object,Spreads.Serialization.Utf8Json.IJsonFormatterResolver)">
+            <summary>
+            Serialize to JsonString with specified resolver.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.BeginObject">
+            <summary>{</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.EndObject">
+            <summary>}</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.BeginArray">
+            <summary>[</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.EndArray">
+            <summary>]</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.Number">
+            <summary>0~9, -</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.String">
+            <summary>"</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.True">
+            <summary>t</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.False">
+            <summary>f</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.Null">
+            <summary>n</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.ValueSeparator">
+            <summary>,</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.JsonToken.NameSeparator">
+            <summary>:</summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonWriter.WriteNameSeparator">
+            <summary>:</summary>
+        </member>
+        <member name="M:Spreads.Serialization.Utf8Json.JsonWriter.WritePropertyName(System.String)">
+            <summary>WriteString + WriteNameSeparator</summary>
+        </member>
+        <member name="T:Spreads.Serialization.Utf8Json.Resolvers.AttributeFormatterResolver">
+            <summary>
+            Get formatter from [JsonFormatter] attribute.
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver">
+            <summary>
+            ObjectResolver by dynamic code generation.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.Default">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.CamelCase">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.SnakeCase">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.ExcludeNull">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.ExcludeNullCamelCase">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.ExcludeNullSnakeCase">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivate">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivateCamelCase">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivateSnakeCase">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivateExcludeNull">
+            <summary>AllowPrivate:True,  ExcludeNull:True,  NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivateExcludeNullCamelCase">
+            <summary>AllowPrivate:True,  ExcludeNull:True,  NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.DynamicObjectResolver.AllowPrivateExcludeNullSnakeCase">
+            <summary>AllowPrivate:True,  ExcludeNull:True,  NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.EnumResolver.Default">
+            <summary>Serialize as Name.</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.EnumResolver.UnderlyingValue">
+            <summary>Serialize as Value.</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.Default">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.CamelCase">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.SnakeCase">
+            <summary>AllowPrivate:False, ExcludeNull:False, NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.ExcludeNull">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.ExcludeNullCamelCase">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.ExcludeNullSnakeCase">
+            <summary>AllowPrivate:False, ExcludeNull:True,  NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivate">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivateCamelCase">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:CamelCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivateSnakeCase">
+            <summary>AllowPrivate:True,  ExcludeNull:False, NameMutate:SnakeCase</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivateExcludeNull">
+            <summary>AllowPrivate:True,  ExcludeNull:True,  NameMutate:Original</summary>
+        </member>
+        <member name="F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivateExcludeNullCamelCase">
+            <summary>AllowPrivate:True,  ExcludeNull:True,  NameMutate:CamelCase</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Spreads.Serialization.Utf8Json.Resolvers.StandardResolver.AllowPrivateExcludeNullSnakeCase" -->
+        <member name="P:Spreads.Serialization.BinarySerializationAttribute.PreferBlittable">
+            <summary>
+            Prefer blittable layout if possible. Sometimes a generic type could implement (or have registered) IBinaryConverter interface
+            but for certain concrete types still be blittable. When this property is true, we
+            ignore the IBinaryConverter interface when a generic type is blittable but implements that interface (or has it registered).
+            </summary>
+        </member>
+        <member name="P:Spreads.Serialization.BinarySerializationAttribute.BlittableSize">
+            <summary>
+            When this property is positive, the type must be blittable with the specified size,
+            otherwise Environment.FailFast method is called and the application is terminated.
+            </summary>
+            <remarks>
+            StructLayout.Size has the same behavior.
+            </remarks>
+        </member>
+        <member name="P:Spreads.Serialization.BinarySerializationAttribute.TypeEnum">
+            <summary>
+            Need this override for Spreads types defined outside this assembly
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.DataTypeHeader">
+            <summary>
+            DataType header
+            </summary>
+            <remarks>
+            0                   1                   2                   3
+            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+            +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+            | Version+Flags |    TypeEnum   |    TypeSize   |  SubTypeEnum  |
+            +---------------------------------------------------------------+
+            
+            
+            In some places we access the elements directly by byte, without dereferencing the entire struct
+            Also this is already in a lot of persisted data, no chance to change this. Version slot applies
+            only to data layout *after* this header.
+            </remarks>
+        </member>
+        <member name="F:Spreads.Serialization.DataTypeHeader.TypeSize">
+            <summary>
+            Size of fixed binary or array element type. If size if fixed then this should be positive.
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.IBinarySerializer`1">
+            <summary>
+            Serialize a generic object T to a pointer, prefixed with version and length.
+            </summary>
+            <remarks>
+            0                   1                   2                   3
+            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+            +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+            |  Ver  |T|D|C|B|    TypeEnum   |    TypeSize   | SubTypeEnum   |
+            +---------------------------------------------------------------+
+            |R|     Payload Length (if VarLen/TypeSize is negative )        |
+            +---------------------------------------------------------------+
+            |                     Serialized Payload                      ...
+            C - compressed
+            D - diffed (if a type implements <see cref="T:Spreads.Native.IDelta`1"/>)
+            B - app/context-specific custom (binary) format . If not set then the payload is JSON.
+            T - value has Timestamp as the first element of payload for binary case or Timestamp field on JSON object.
+            </remarks>
+        </member>
+        <member name="P:Spreads.Serialization.IBinarySerializer`1.SerializerVersion">
+            <summary>
+            Version of the converter. 15 (4 bits) max.
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.IBinarySerializer`1.SizeOf(`0,Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@)">
+            <summary>
+            Returns the size of serialized bytes without the version+length header.
+            For types with non-fixed size this method could serialize value into a temporary buffer if it is not
+            possible to calculate serialized bytes length without actually performing serialization.
+            The temporaryBuffer ArraySegment should use a buffer from <see cref="M:Spreads.Buffers.BufferPool`1.Rent(System.Int32)"/>
+            and start with offset 8, otherwise BinarySerialized will copy (not implemented and likely won't) or throw.
+            The buffer is owned by the caller, no other references to it should remain after the call.
+            </summary>
+            <param name="value">A value to serialize.</param>
+            <param name="temporaryBuffer">A buffer where a value is serialized into if it is not possible to calculate serialized buffer size
+            without actually performing serialization.</param>
+            <param name="withPadding">True if temporaryBuffer is padded with 16 bytes. This is required to avoid a copy. Try to pad the buffer if possible.</param>
+        </member>
+        <member name="M:Spreads.Serialization.IBinarySerializer`1.Write(`0,Spreads.Buffers.DirectBuffer@)">
+            <summary>
+            Write serialized value prepended with <see cref="T:Spreads.Serialization.DataTypeHeader"/> to <paramref name="destination"/> buffer. Use SizeOf to prepare destination of required size.
+            This method is called by <see cref="!:BinarySerializer"/> only when <see cref="M:Spreads.Serialization.IBinarySerializer`1.SizeOf(`0,Spreads.Buffers.RetainedMemory{System.Byte}@,System.Boolean@)"/> returned
+            positive length with default/empty temporaryBuffer.
+            </summary>
+            <param name="value">A value to serialize.</param>
+            <param name="destination">A pinned pointer to a buffer to serialize the value into. It must have at least number of bytes returned by SizeOf().</param>
+            <returns>Returns the number of bytes written to the destination buffer or a negative error code that corresponds to <see cref="!:BinarySerializerErrorCode"/>.</returns>
+        </member>
+        <member name="M:Spreads.Serialization.IBinarySerializer`1.Read(Spreads.Buffers.DirectBuffer@,`0@)">
+            <summary>
+            Reads new value or fill existing value with data from the pointer,
+            returns number of bytes read including any header.
+            If not <see cref="F:Spreads.Serialization.TypeHelper`1.IsFixedSize"/>, checks that version from the pointer equals the Version property.
+            </summary>
+        </member>
+        <member name="T:Spreads.Serialization.SerializationFormat">
+             <summary>
+             Preferred serialization method. Binary is used only for blittable types or when IBinaryConverter is present.
+             Compression is done only when compressed size is not larger than the original size (usually it works, but it is
+             possible that data will not be compressed and providing this enum to serializer means best-effort, not a guarantee).
+            
+             Binary serialization format. Serialized data always has a header describing the method of
+             binary serialization. The data could be Json, but because of the header it is not directly
+             consumable by e.g. browsers. However, for Json/JsonGZip cases the only difference is
+             the header and the rest payload could be directly sent to a browser expecting 'application/json'
+             MIME type.
+             </summary>
+             <remarks>
+             JsonGZip:
+             Objects are converted to Json and compressed with JsonGZip method. This format is compatible with raw
+             http payload with 'Accept-encoding: gzip' headers past the 8 bytes header.
+            
+             BinaryLz4/Zstd:
+             Binary is stored as blittable representation with Blosc byteshuffle for arrays with fixed-size elements.
+             Then serialized (and byteshuffled) buffer is compressed with LZ4 (super fast but lower compression) or
+             Zstd (still fast and high compression, preferred method) if compression gives smaller size.
+             Actual buffer layout is type dependent.
+            
+             Serialized buffer has a header with a flag indicating the format and
+             wether or not the buffer is compressed. Some data types are stored as deltas
+             with diffing performed before byteshuffling and the header must have such flag as well.
+            
+             SerializationFormat should not be confused with Transport/Protocol format:
+             * Text trasport/protocol supports only JSON and the payload is plain or gzipped JSON that
+               could be consumed by browsers or http servers (with headers indicating the actual format - compressed or not).
+             * Binary trasport/protocol cannot be consumed directly by browsers or http servers. The exact data layout of payload
+               depends on data type and is encoded in a 4 (+ optional 4 bytes length for variable sized data) bytes header.
+               Data could be serialized as JSON (mostly for convenience if a type is not used a lot and not blittable)
+               but it is still a binary format, though one that could be trivially converted to JSON.
+             </remarks>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.Binary">
+            <summary>
+            Custom binary format without compression.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.BinaryGZip">
+            <summary>
+            Well-balanced compression with good x-plat support.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.BinaryLz4">
+            <summary>
+            Fast compression, larger size.
+            </summary>
+            <remarks>
+            Use blittable reprezentation, byteshuffle with Blosc where possibe,
+            fallback to JSON for non-blittable types and compress with BinaryLz4.
+            </remarks>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.BinaryZstd">
+            <summary>
+            Good compression ratio, slower speed.
+            </summary>
+            <remarks>
+            Use blittable reprezentation, byteshuffle with Blosc where possibe,
+            fallback to JSON for non-blittable types and compress with BinaryZstd.
+            </remarks>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.Json">
+            <summary>
+            Uncompressed JSON
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.SerializationFormat.JsonGZip">
+            <summary>
+            Serialize to JSON and compress with GZip method.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.TypeHelper`1.FixedSize">
+            <summary>
+            Returns a positive size of a pinnable type T, -1 if the type T is not pinnable or has
+            a registered <see cref="T:Spreads.Serialization.IBinarySerializer`1"/> converter.
+            We assume the type T is pinnable if `GCHandle.Alloc(T[2], GCHandleType.Pinned) = true`.
+            This is more relaxed than Marshal.SizeOf, but still doesn't cover cases such as
+            an array of KVP[DateTime,double], which has contiguous layout in memory.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.TypeHelper`1.IsPinnable">
+            <summary>
+            True if an array T[] could be pinned in memory.
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.TypeHelper`1.IsValueType">
+            <summary>
+            CLR definition, we cache it here since ty.IsValueType is a virtual call
+            </summary>
+        </member>
+        <member name="F:Spreads.Serialization.TypeHelper`1.IsIDelta">
+            <summary>
+            Implements <see cref="T:Spreads.Native.IDelta`1"/>
+            </summary>
+        </member>
+        <member name="M:Spreads.Serialization.TypeHelper`1.Init">
+            <summary>
+            Method is only called from the static constructor of TypeHelper.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Spreads.Serialization.VersionAndFlags">
+            These are for arrays only and should be a part of payload
+            D - Data is stored a delta vs previous data point (snapshot) without this flag or array data is diffed vs the first value in an array (if a type implements <see cref="T:Spreads.Native.IDelta`1"/>).
+            S - Data is shuffled before compression.
+            <summary>
+            Version and flags
+            </summary>
+            <remarks>
+            Format:
+            0 1 2 3 4 5 6 7 8
+            +-+-+-+-+-+-+-+-+
+            |0|Ver|R|T|CMP|B|
+            +---------------+
+            B - Binary format (read as "Not JSON"). If not set then the payload is JSON, if set then payload is blittable or custom binary.
+            CMP - compression method (Zstd/Lz4/Deflate/None):
+                00 - not compressed
+                01 - GZip
+                10 - Lz4
+                11 - Zstd
+            T - Timestamped. A value has Timestamp (8 bytes) as the first element of payload. It is included in payload length for var-sized types.
+            R - reserved.
+            Ver - Converter version.
+            0 - will need completely new layout when this is not zero.
+            </remarks>
+        </member>
+        <member name="P:Spreads.Serialization.VersionAndFlags.IsCompressed">
+            <summary>
+            Compressed using raw deflate for JSON or using Blosc library with method encoded in Blosc header.
+            </summary>
+        </member>
+        <member name="P:Spreads.Serialization.VersionAndFlags.IsBinary">
+            <summary>
+            Not JSON fallback but some custom layout (blittable or manual pack).
+            </summary>
+        </member>
+        <member name="T:Spreads.Settings">
+            <summary>
+            Global settings.
+            </summary>
+        </member>
+        <member name="P:Spreads.Settings.DoAdditionalCorrectnessChecks">
+            <summary>
+            Enable/disable additional correctess checks that could affect performance or exit the process with FailFast.
+            This could only be set at application startup before accessing other Spreads types.
+            By default this value is set to true and Spreads usually fails fast on any condition
+            that could compromise calculation correctness or data integrity. If an application
+            that uses Spreads runs correctly "long-enough" this setting could be set to false to measure
+            the effect of the checks on performance. If the effect is not significant it is safer
+            to keep this option as true if correctness of Spreads is more important than nanoseconds
+            and fail fast is more acceptable scenario than incorrect calculations.
+            </summary>
+            <remarks>
+            In Spreads, this setting is used for cases that does not reduce performance
+            a lot, e.g. null or range checks in hot loops that take fixed number of
+            CPU cycles, break inlining or similar fixed-time impact.
+            It should not be used e.g. to allocate finalizable objects to detect leaks
+            in buffer management and other cases that could generate a lot of garbage and
+            induce GC latency. For the later cases `#if DEBUG` is used.
+            </remarks>
+        </member>
+        <member name="M:Spreads.Buffers.ArrayMemory`1.Create(System.Int32,System.Boolean)">
+            <summary>
+            Create <see cref="T:Spreads.Buffers.ArrayMemory`1"/> backed by an array from shared array pool.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.ArrayMemory`1.Create(`0[])">
+            <summary>
+            Create <see cref="T:Spreads.Buffers.ArrayMemory`1"/> backed by the provided array.
+            Ownership of the provided array if transferred to <see cref="T:Spreads.Buffers.ArrayMemory`1"/> after calling
+            this method and no other code should touch the array afterwards.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.ArrayMemory`1.Create(`0[],System.Boolean,System.Boolean)">
+            <summary>
+            Create <see cref="T:Spreads.Buffers.ArrayMemory`1"/> backed by the provided array.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.ArrayMemory`1.Create(`0[],System.Int32,System.Int32,System.Boolean,System.Boolean,Spreads.Buffers.RetainableMemoryPool{`0})">
+            <summary>
+            Create <see cref="T:Spreads.Buffers.ArrayMemory`1"/> backed by the provided array.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.ArrayMemory`1.Vec">
+            <summary>
+            Returns <see cref="T:Spreads.Native.Vec`1"/> backed by this instance memory.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.BufferPool`1.Return(`0[],System.Boolean)">
+            <summary>
+            Return an array to the pool.
+            </summary>
+            <param name="array">An array to return.</param>
+            <param name="clearArray">Force clear of arrays of blittable types. Arrays that could have references are always cleared.</param>
+        </member>
+        <member name="F:Spreads.Buffers.BufferPool.OffHeapMemoryPool">
+            <summary>
+            Default OffHeap pool has capacity of 4. This static field could be changed to a new instance.
+            Buffer never cleared automatically and user must clear them when needed. Zeroing is a big cost
+            and even new[]-ing has to zero memory, this is why it is slow.
+            Please know what you are doing.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.BufferPool._threadStaticBuffer">
+            <summary>
+            Temp storage e.g. for serialization
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.BufferPool.StaticBuffer">
+            <summary>
+            Thread-static <see cref="T:Spreads.Buffers.ArrayMemory`1"/> with size of <see cref="F:Spreads.Buffers.BufferPool.StaticBufferSize"/>.
+            Never dispose it!
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.BufferPool.Retain(System.Int32,System.Boolean)">
+            <summary>
+            Return a contiguous segment of memory backed by a pooled memory from a shares array pool.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.BufferPool.RetainTemp(System.Int32)">
+            <summary>
+            Note that requireExact is false, this method is for temp buffers that could be very large.
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.BuffersThrowHelper">
+            <summary>
+            Buffers throw helper
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.DirectBuffer">
+            <summary>
+            Provides unsafe read/write operations on a memory pointer.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.#ctor(System.Int64,System.IntPtr)">
+            <summary>
+            Attach a view to an unmanaged buffer owned by external code
+            </summary>
+            <param name="data">Unmanaged byte buffer</param>
+            <param name="length">Length of the buffer</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.#ctor(System.Int64,System.Byte*)">
+            <summary>
+            Unsafe constructors performs no input checks.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.DirectBuffer.Length">
+            <summary>
+            Capacity of the underlying buffer
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadChar(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Byte"/> value at a given index.
+            </summary>
+            <param name="index">index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteChar(System.Int64,System.Char)">
+            <summary>
+            Writes a <see cref="T:System.Byte"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadSByte(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.SByte"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteSByte(System.Int64,System.SByte)">
+            <summary>
+            Writes a <see cref="T:System.SByte"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadByte(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Byte"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteByte(System.Int64,System.Byte)">
+            <summary>
+            Writes a <see cref="T:System.Byte"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadInt16(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Int16"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteInt16(System.Int64,System.Int16)">
+            <summary>
+            Writes a <see cref="T:System.Int16"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadInt32(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Int32"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteInt32(System.Int64,System.Int32)">
+            <summary>
+            Writes a <see cref="T:System.Int32"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadInt64(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Int64"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteInt64(System.Int64,System.Int64)">
+            <summary>
+            Writes a <see cref="T:System.Int64"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadUInt16(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.UInt16"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteUInt16(System.Int64,System.UInt16)">
+            <summary>
+            Writes a <see cref="T:System.UInt16"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadUInt32(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.UInt32"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteUInt32(System.Int64,System.UInt32)">
+            <summary>
+            Writes a <see cref="T:System.UInt32"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadUInt64(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.UInt64"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteUInt64(System.Int64,System.UInt64)">
+            <summary>
+            Writes a <see cref="T:System.UInt64"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadFloat(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Single"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteFloat(System.Int64,System.Single)">
+            <summary>
+            Writes a <see cref="T:System.Single"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.ReadDouble(System.Int64)">
+            <summary>
+            Gets the <see cref="T:System.Double"/> value at a given index.
+            </summary>
+            <param name="index"> index in bytes from which to get.</param>
+            <returns>the value at a given index.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.WriteDouble(System.Int64,System.Double)">
+            <summary>
+            Writes a <see cref="T:System.Double"/> value to a given index.
+            </summary>
+            <param name="index">index in bytes for where to put.</param>
+            <param name="value">value to be written</param>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.Read``1(System.Int64)">
+            <summary>
+            Unaligned read starting from index.
+            A shortcut to <see cref="M:System.Runtime.CompilerServices.Unsafe.ReadUnaligned``1(System.Void*)"/>.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBuffer.Read``1(System.Int64,``0@)">
+            <summary>
+            Unaligned read starting from index.
+            A shortcut to <see cref="M:System.Runtime.CompilerServices.Unsafe.ReadUnaligned``1(System.Void*)"/>.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.DirectBufferExtensions.AsDirectBuffer(System.Byte[],Spreads.Buffers.DirectBuffer@)">
+            <summary>
+            For usage: using (array.AsDirectBuffer(out var db)) { ... }
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.IPinnedSpan`1">
+            <summary>
+            Helper interface to simplify work with pinned/native memory without relying only on Span.
+            </summary>
+            <typeparam name="T">Unmanaged struct yet without C# 7.3 `unmanaged` constraint.</typeparam>
+        </member>
+        <member name="P:Spreads.Buffers.IPinnedSpan`1.Data">
+            <summary>
+            Pointer to the first element.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.IPinnedSpan`1.Length">
+            <summary>
+            Number of items (not bytes when T != byte)
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.OffHeapBuffer`1">
+            <summary>
+            Completely not thread-safe with possible segfaults if created/resized from different threads.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.OffHeapBuffer`1._pointer">
+            <summary>
+            Use only after EnsureCapacity call
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.OffHeapBuffer`1.Length">
+            <inheritdoc />
+        </member>
+        <member name="P:Spreads.Buffers.OffHeapBuffer`1.IsEmpty">
+            <inheritdoc />
+        </member>
+        <member name="P:Spreads.Buffers.OffHeapBuffer`1.DirectBuffer">
+            <inheritdoc />
+        </member>
+        <member name="P:Spreads.Buffers.OffHeapBuffer`1.Item(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStream">
+             <summary>
+             MemoryStream implementation that deals with pooling and managing memory streams which use potentially large
+             buffers.
+             </summary>
+             <remarks>
+             This class works in tandem with the RecylableMemoryStreamManager to supply MemoryStream
+             objects to callers, while avoiding these specific problems:
+             1. LOH allocations - since all large buffers are pooled, they will never incur a Gen2 GC
+             2. Memory waste - A standard memory stream doubles its size when it runs out of room. This
+             leads to continual memory growth as each stream approaches the maximum allowed size.
+             3. Memory copying - Each time a MemoryStream grows, all the bytes are copied into new buffers.
+             This implementation only copies the bytes when GetBuffer is called.
+             4. Memory fragmentation - By using homogeneous buffer sizes, it ensures that blocks of memory
+             can be easily reused.
+            
+             The stream is implemented on top of a series of uniformly-sized blocks. As the stream's length grows,
+             additional blocks are retrieved from the memory manager. It is these blocks that are pooled, not the stream
+             object itself.
+            
+             The biggest wrinkle in this implementation is when GetBuffer() is called. This requires a single
+             contiguous buffer. If only a single block is in use, then that block is returned. If multiple blocks
+             are in use, we retrieve a larger buffer from the memory manager. These large buffers are also pooled,
+             split by size--they are multiples of a chunk size (1 MB by default).
+            
+             Once a large buffer is assigned to the stream the blocks are NEVER again used for this stream. All operations take place on the
+             large buffer. The large buffer can be replaced by a larger buffer from the pool as needed. All blocks and large buffers
+             are maintained in the stream until the stream is disposed (unless AggressiveBufferReturn is enabled in the stream manager).
+            
+             </remarks>
+        </member>
+        <member name="F:Spreads.Buffers.RecyclableMemoryStream._blocks">
+            <summary>
+            All of these blocks must be the same size
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RecyclableMemoryStream._largeBuffer">
+            <summary>
+            This is only set by GetBuffer() if the necessary buffer is larger than a single block size, or on
+            construction if the caller immediately requests a single large buffer.
+            </summary>
+            <remarks>If this field is non-null, it contains the concatenation of the bytes found in the individual
+            blocks. Once it is created, this (or a larger) largeBuffer will be used for the life of the stream.
+            </remarks>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Id">
+            <summary>
+            Unique identifier for this stream across it's entire lifetime
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Tag">
+            <summary>
+            A temporary identifier for the current usage of this stream.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.MemoryManager">
+            <summary>
+            Gets the memory manager being used by this stream.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.AllocationStack">
+            <summary>
+            Callstack of the constructor. It is only set if MemoryManager.GenerateCallStacks is true,
+            which should only be in debugging situations.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.DisposeStack">
+            <summary>
+            Callstack of the Dispose call. It is only set if MemoryManager.GenerateCallStacks is true,
+            which should only be in debugging situations.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Create(System.Int32,System.Byte[],System.Int32,System.String,Spreads.Buffers.RecyclableMemoryStreamManager)">
+            <summary>
+            Allocate a new RecyclableMemoryStream object
+            </summary>
+            <param name="requestedSize">The initial requested size to prevent future allocations</param>
+            <param name="initialLargeBuffer">An initial buffer to use. This buffer will be owned by the stream and returned to the memory manager upon Dispose.</param>
+            <param name="length">Set length if initialLargeBuffer has data.</param>
+            <param name="tag">A string identifying this stream for logging and debugging purposes</param>
+            <param name="memoryManager">The memory manager</param>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager)">
+            <summary>
+            Allocate a new RecyclableMemoryStream object.
+            </summary>
+            <param name="memoryManager">The memory manager</param>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Create(Spreads.Buffers.RecyclableMemoryStreamManager,System.String)">
+            <summary>
+            Allocate a new RecyclableMemoryStream object
+            </summary>
+            <param name="memoryManager">The memory manager</param>
+            <param name="tag">A string identifying this stream for logging and debugging purposes</param>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Create(System.Int32,System.String,Spreads.Buffers.RecyclableMemoryStreamManager)">
+            <summary>
+            Allocate a new RecyclableMemoryStream object
+            </summary>
+            <param name="requestedSize">The initial requested size to prevent future allocations</param>
+            <param name="tag">A string identifying this stream for logging and debugging purposes</param>
+            <param name="memoryManager">The memory manager</param>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Dispose(System.Boolean)">
+            <summary>
+            Returns the memory used by this stream back to the pool.
+            </summary>
+            <param name="disposing">Whether we're disposing (true), or being called by the finalizer (false)</param>
+            <remarks>This method is not thread safe and it may not be called more than once.</remarks>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Close">
+            <summary>
+            Equivalent to Dispose
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Capacity">
+            <summary>
+            Gets or sets the capacity
+            </summary>
+            <remarks>Capacity is always in multiples of the memory manager's block size, unless
+            the large buffer is in use.  Capacity never decreases during a stream's lifetime.
+            Explicitly setting the capacity to a lower value than the current value will have no effect.
+            This is because the buffers are all pooled by chunks and there's little reason to
+            allow stream truncation.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Length">
+            <summary>
+            Gets the number of bytes written to this stream.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Position">
+            <summary>
+            Gets the current position in the stream
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.CanRead">
+            <summary>
+            Whether the stream can currently read
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.CanSeek">
+            <summary>
+            Whether the stream can currently seek
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.CanTimeout">
+            <summary>
+            Always false
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.CanWrite">
+            <summary>
+            Whether the stream can currently write
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.GetBuffer">
+            <summary>
+            Returns a single buffer containing the contents of the stream.
+            The buffer may be longer than the stream length.
+            </summary>
+            <returns>A byte[] buffer</returns>
+            <remarks>IMPORTANT: Doing a Write() after calling GetBuffer() invalidates the buffer. The old buffer is held onto
+            until Dispose is called, but the next time GetBuffer() is called, a new buffer from the pool will be required.</remarks>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.ToArray">
+            <summary>
+            Returns a new array with a copy of the buffer's contents. You should almost certainly be using GetBuffer combined with the Length to
+            access the bytes in this stream. Calling ToArray will destroy the benefits of pooled buffers, but it is included
+            for the sake of completeness.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads from the current position into the provided buffer
+            </summary>
+            <param name="buffer">Destination buffer</param>
+            <param name="offset">Offset into buffer at which to start placing the read bytes.</param>
+            <param name="count">Number of bytes to read.</param>
+            <returns>The number of bytes read</returns>
+            <exception cref="T:System.ArgumentNullException">buffer is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is less than 0</exception>
+            <exception cref="T:System.ArgumentException">offset subtracted from the buffer length is less than count</exception>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.SafeRead(System.Byte[],System.Int64,System.Int64,System.Int64@)">
+            <summary>
+            Reads from the specified position into the provided buffer
+            </summary>
+            <param name="buffer">Destination buffer</param>
+            <param name="offset">Offset into buffer at which to start placing the read bytes.</param>
+            <param name="count">Number of bytes to read.</param>
+            <param name="streamPosition">Position in the stream to start reading from</param>
+            <returns>The number of bytes read</returns>
+            <exception cref="T:System.ArgumentNullException">buffer is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is less than 0</exception>
+            <exception cref="T:System.ArgumentException">offset subtracted from the buffer length is less than count</exception>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes the buffer to the stream
+            </summary>
+            <param name="buffer">Source buffer</param>
+            <param name="offset">Start position</param>
+            <param name="count">Number of bytes to write</param>
+            <exception cref="T:System.ArgumentNullException">buffer is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative</exception>
+            <exception cref="T:System.ArgumentException">buffer.Length - offset is not less than count</exception>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.SafeWrite(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes the buffer to the stream
+            </summary>
+            <param name="buffer">Source buffer</param>
+            <param name="offset">Start position</param>
+            <param name="count">Number of bytes to write</param>
+            <exception cref="T:System.ArgumentNullException">buffer is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative</exception>
+            <exception cref="T:System.ArgumentException">buffer.Length - offset is not less than count</exception>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.ToString">
+            <summary>
+            Returns a useful string for debugging. This should not normally be called in actual production code.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.WriteByte(System.Byte)">
+            <summary>
+            Writes a single byte to the current position in the stream.
+            </summary>
+            <param name="value">byte value to write</param>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.SafeWriteByte(System.Byte)">
+            <summary>
+            Writes a single byte to the current position in the stream.
+            </summary>
+            <param name="value">byte value to write</param>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.ReadByte">
+            <summary>
+            Reads a single byte from the current position in the stream.
+            </summary>
+            <returns>The byte at the current position, or -1 if the position is at the end of the stream.</returns>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.SafeReadByte(System.Int64@)">
+            <summary>
+            Reads a single byte from the specified position in the stream.
+            </summary>
+            <param name="streamPosition">The position in the stream to read from</param>
+            <returns>The byte at the current position, or -1 if the position is at the end of the stream.</returns>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.SetLength(System.Int64)">
+            <summary>
+            Sets the length of the stream
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">value is negative or larger than MaxStreamLength</exception>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Sets the position to the offset from the seek location
+            </summary>
+            <param name="offset">How many bytes to move</param>
+            <param name="loc">From where</param>
+            <returns>The new position</returns>
+            <exception cref="T:System.ObjectDisposedException">Object has been disposed</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset is larger than MaxStreamLength</exception>
+            <exception cref="T:System.ArgumentException">Invalid seek origin</exception>
+            <exception cref="T:System.IO.IOException">Attempt to set negative position</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStream.WriteTo(System.IO.Stream)">
+            <summary>
+            Synchronously writes this stream's bytes to the parameter stream.
+            </summary>
+            <param name="stream">Destination stream</param>
+            <remarks>Important: This does a synchronous write, which may not be desired in some situations</remarks>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStream.Chunks">
+            <summary>
+            Iterate over all internal chunks as ArraySegments without copying data
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStreamManager">
+             <summary>
+             Manages pools of RecyclableMemoryStream objects.
+             </summary>
+             <remarks>
+             There are two pools managed in here. The small pool contains same-sized buffers that are handed to streams
+             as they write more data.
+            
+             For scenarios that need to call GetBuffer(), the large pool contains buffers of various sizes, all
+             multiples of LargeBufferMultiple (1 MB by default). They are split by size to avoid overly-wasteful buffer
+             usage. There should be far fewer 8 MB buffers than 1 MB buffers, for example.
+             </remarks>
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStreamManager.EventHandler">
+            <summary>
+            Generic delegate for handling events without any arguments.
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscardedEventHandler">
+            <summary>
+            Delegate for handling large buffer discard reports.
+            </summary>
+            <param name="reason">Reason the buffer was discarded.</param>
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStreamManager.StreamLengthReportHandler">
+            <summary>
+            Delegate for handling reports of stream size when streams are allocated
+            </summary>
+            <param name="bytes">Bytes allocated.</param>
+        </member>
+        <member name="T:Spreads.Buffers.RecyclableMemoryStreamManager.UsageReportEventHandler">
+            <summary>
+            Delegate for handling periodic reporting of memory use statistics.
+            </summary>
+            <param name="smallPoolInUseBytes">Bytes currently in use in the small pool.</param>
+            <param name="smallPoolFreeBytes">Bytes currently free in the small pool.</param>
+            <param name="largePoolInUseBytes">Bytes currently in use in the large pool.</param>
+            <param name="largePoolFreeBytes">Bytes currently free in the large pool.</param>
+        </member>
+        <member name="F:Spreads.Buffers.RecyclableMemoryStreamManager._largePools">
+            <summary>
+            pools[0] = 1x largeBufferMultiple buffers
+            pools[1] = 2x largeBufferMultiple buffers
+            etc., up to maximumBufferSize
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.#ctor">
+            <summary>
+            Initializes the memory manager with the default block/buffer specifications.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes the memory manager with the given block requiredSize.
+            </summary>
+            <param name="blockSize">Size of each block that is pooled. Must be > 0. Will use the next power of two if the given size in not a power of two.</param>
+            <param name="largeBufferMultiple">Each large buffer will be a multiple of this value.</param>
+            <param name="maximumBufferSize">Buffers larger than this are not pooled</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">blockSize is not a positive number, or largeBufferMultiple is not a positive number, or maximumBufferSize is less than blockSize.</exception>
+            <exception cref="T:System.ArgumentException">maximumBufferSize is not a multiple of largeBufferMultiple</exception>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.BlockSize">
+            <summary>
+            The size of each block. It must be set at creation and cannot be changed.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferMultiple">
+            <summary>
+            All buffers are multiples of this number. It must be set at creation and cannot be changed.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.MaximumBufferSize">
+            <summary>
+            Gets or sets the maximum buffer size.
+            </summary>
+            <remarks>Any buffer that is returned to the pool that is larger than this will be
+            discarded and garbage collected.</remarks>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolFreeSize">
+            <summary>
+            Number of bytes in large pool not currently in use
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.LargePoolInUseSize">
+            <summary>
+            Number of bytes currently in use by streams from the large pool
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.LargeBuffersFree">
+            <summary>
+            How many buffers are in the large pool
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.MaximumFreeLargePoolBytes">
+            <summary>
+            How many bytes of large free buffers to allow before we start dropping
+            those returned to us.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.MaximumStreamCapacity">
+            <summary>
+            Maximum stream capacity in bytes. Attempts to set a larger capacity will
+            result in an exception.
+            </summary>
+            <remarks>A value of 0 indicates no limit.</remarks>
+        </member>
+        <member name="P:Spreads.Buffers.RecyclableMemoryStreamManager.GenerateCallStacks">
+            <summary>
+            Whether to save callstacks for stream allocations. This can help in debugging.
+            It should NEVER be turned on generally in production.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetBlock">
+            <summary>
+            Removes and returns a single block from the pool.
+            </summary>
+            <returns>A byte[] array</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetLargeBuffer(System.Int32,System.String)">
+            <summary>
+            Returns a buffer of arbitrary size from the large buffer pool. This buffer
+            will be at least the requiredSize and always be a multiple of largeBufferMultiple.
+            </summary>
+            <param name="requiredSize">The minimum length of the buffer</param>
+            <param name="tag">The tag of the stream returning this buffer, for logging if necessary.</param>
+            <returns>A buffer of at least the required size.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.ReturnLargeBuffer(System.Byte[],System.String)">
+            <summary>
+            Returns the buffer to the large pool
+            </summary>
+            <param name="buffer">The buffer to return.</param>
+            <param name="tag">The tag of the stream returning this buffer, for logging if necessary.</param>
+            <exception cref="T:System.ArgumentNullException">buffer is null</exception>
+            <exception cref="T:System.ArgumentException">buffer.Length is not a multiple of LargeBufferMultiple (it did not originate from this pool)</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.ReturnBlocks(System.Collections.Generic.List{System.Byte[]},System.String)">
+            <summary>
+            Returns the blocks to the pool
+            </summary>
+            <param name="blocks">Collection of blocks to return to the pool</param>
+            <param name="tag">The tag of the stream returning these blocks, for logging if necessary.</param>
+            <exception cref="T:System.ArgumentNullException">blocks is null</exception>
+            <exception cref="T:System.ArgumentException">blocks contains buffers that are the wrong size (or null) for this memory manager</exception>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetStream">
+            <summary>
+            Retrieve a new MemoryStream object with no tag and a default initial capacity.
+            </summary>
+            <returns>A MemoryStream.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String)">
+            <summary>
+            Retrieve a new MemoryStream object with the given tag and a default initial capacity.
+            </summary>
+            <param name="tag">A tag which can be used to track the source of the stream.</param>
+            <returns>A MemoryStream.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Int32)">
+            <summary>
+            Retrieve a new MemoryStream object with the given tag and at least the given capacity.
+            </summary>
+            <param name="tag">A tag which can be used to track the source of the stream.</param>
+            <param name="requiredSize">The minimum desired capacity for the stream.</param>
+            <returns>A MemoryStream.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Retrieve a new MemoryStream object with the given tag and at least the given capacity, possibly using
+            a single continugous underlying buffer.
+            </summary>
+            <remarks>Retrieving a MemoryStream which provides a single contiguous buffer can be useful in situations
+            where the initial size is known and it is desirable to avoid copying data between the smaller underlying
+            buffers to a single large one. This is most helpful when you know that you will always call GetBuffer
+            on the underlying stream.</remarks>
+            <param name="tag">A tag which can be used to track the source of the stream.</param>
+            <param name="requiredSize">The minimum desired capacity for the stream.</param>
+            <param name="asContiguousBuffer">Whether to attempt to use a single contiguous buffer.</param>
+            <returns>A MemoryStream.</returns>
+        </member>
+        <member name="M:Spreads.Buffers.RecyclableMemoryStreamManager.GetStream(System.String,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Retrieve a new MemoryStream object with the given tag and with contents copied from the provided
+            buffer. The provided buffer is not wrapped or used after construction.
+            </summary>
+            <remarks>The new stream's position is set to the beginning of the stream when returned.</remarks>
+            <param name="tag">A tag which can be used to track the source of the stream.</param>
+            <param name="buffer">The byte buffer to copy data from.</param>
+            <param name="offset">The offset from the start of the buffer to copy from.</param>
+            <param name="count">The number of bytes to copy from the buffer.</param>
+            <returns>A MemoryStream.</returns>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.BlockCreated">
+            <summary>
+            Triggered when a new block is created.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.BlockDiscarded">
+            <summary>
+            Triggered when a new block is created.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferCreated">
+            <summary>
+            Triggered when a new large buffer is created.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.StreamCreated">
+            <summary>
+            Triggered when a new stream is created.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.StreamDisposed">
+            <summary>
+            Triggered when a stream is disposed.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.StreamFinalized">
+            <summary>
+            Triggered when a stream is finalized.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.StreamLength">
+            <summary>
+            Triggered when a stream is finalized.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.StreamConvertedToArray">
+            <summary>
+            Triggered when a user converts a stream to array.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.LargeBufferDiscarded">
+            <summary>
+            Triggered when a large buffer is discarded, along with the reason for the discard.
+            </summary>
+        </member>
+        <member name="E:Spreads.Buffers.RecyclableMemoryStreamManager.UsageReport">
+            <summary>
+            Periodically triggered to report usage statistics.
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.RetainableMemory`1">
+            <summary>
+            Base class for retainable memory. Buffers are pinned during initialization if that is possible.
+            Initialization could be from a pool of arrays or from native memory.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemory`1._isPooled">
+            <summary>
+            A pool sets this value atomically from a SpinLock.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemory`1.SkipCleaning">
+            <summary>
+            True if the memory is already clean (all zeros) on return. Useful for the case when
+            the pool has <see cref="F:Spreads.Buffers.RetainableMemoryPool`1.IsRentAlwaysClean"/> set to true
+            but we know that the buffer is already clean. Use with caution only when cleanliness
+            is obvious and when cost of cleaning could be high (larger buffers).
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemory`1._isNativeWithHeader">
+            <summary>
+            True if there is a header at <see cref="F:Spreads.Buffers.RetainableMemory`1.NativeHeaderSize"/> before the <see cref="F:Spreads.Buffers.RetainableMemory`1._pointer"/>.
+            Special case for DS's SM.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemory`1.ExternallyOwned">
+            <summary>
+            An array was allocated manually. Otherwise even if _pool == null we return the array to default array pool on Dispose.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemory`1.Decrement">
+            <summary>
+            Returns count value after decrement.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemory`1.PointerPow2">
+            <summary>
+            Extra space (if any) is at the beginning.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemory`1.IsPinned">
+            <summary>
+            Underlying memory is a pinned array or native memory.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemory`1.LengthPow2">
+            <summary>
+            Length for pool buckets. To simplify and speedup implementation we just
+            use default pow2 pool logic without virtual methods and complexity of
+            calculating lengths. A buffer is pooled by max pow2 it could fit into.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemory`1.Vec">
+            <summary>
+            Returns <see cref="T:Spreads.Native.Vec`1"/> backed by this instance memory.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemory`1.Retain">
+            <summary>
+            Retain buffer memory.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemory`1.Retain(System.Int32,System.Int32)">
+            <summary>
+            Retain buffer memory without pinning it.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemory`1.Finalize">
+            <summary>
+            We need a finalizer because reference count and backing memory is a native resource.
+            If object dies without releasing a reference then it is an error.
+            Current code kills application by throwing in finalizer and this is what we want
+            for DS - ensure correct memory management. Maybe we should just decrement the counter
+            and trace a warning.
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.RetainableMemoryPool`1">
+            <summary>
+            This is thread-safe only with correct usage. With Rent a buffer must be returned via Return and used only by a single
+            thread at a time and no refcounting is done. As soon as a buffer is Retain-ed it must only be used with ref-counting
+            methods such as Increment/Decrement and Dispose of RetainedMemory. A buffer is returned to a pool when refcount
+            reaches zero.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPool`1.IsRentAlwaysClean">
+            <summary>
+            Set to true to always clean on return and clean buffers produced by factory.
+            </summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPool`1.DefaultMaxArrayLength">
+            <summary>The default maximum length of each array in the pool (2^20).</summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPool`1.DefaultMaxNumberOfArraysPerBucket">
+            <summary>The default maximum number of arrays per bucket that are available for rent.</summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemoryPool`1.Id">
+            <summary>Gets an ID for the pool to use with events.</summary>
+        </member>
+        <member name="T:Spreads.Buffers.RetainableMemoryPool`1.Bucket">
+            <summary>Provides a thread-safe bucket containing buffers that can be Rent'd and Return'd.</summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPool`1.Bucket.#ctor(Spreads.Buffers.RetainableMemoryPool{`0},System.Func{Spreads.Buffers.RetainableMemoryPool{`0},System.Int32,Spreads.Buffers.RetainableMemory{`0}},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates the pool with numberOfBuffers buffers where each buffer is of bufferLength length.
+            </summary>
+        </member>
+        <member name="P:Spreads.Buffers.RetainableMemoryPool`1.Bucket.Id">
+            <summary>Gets an ID for the bucket to use with events.</summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPool`1.Bucket.Rent">
+            <summary>Takes an array from the bucket.  If the bucket is empty, returns null.</summary>
+        </member>
+        <member name="T:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocatedReason">
+            <summary>The reason for a BufferAllocated event.</summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocatedReason.Pooled">
+            <summary>The pool is allocating a buffer to be pooled in a bucket.</summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocatedReason.OverMaximumSize">
+            <summary>The requested buffer size was too large to be pooled.</summary>
+        </member>
+        <member name="F:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocatedReason.PoolExhausted">
+            <summary>The pool has already allocated for pooling as many buffers of a particular size as it's allowed.</summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferRented(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Event for when a buffer is rented.  This is invoked once for every successful call to Rent,
+            regardless of whether a buffer is allocated or a buffer is taken from the pool.  In a
+            perfect situation where all rented buffers are returned, we expect to see the number
+            of BufferRented events exactly match the number of BuferReturned events, with the number
+            of BufferAllocated events being less than or equal to those numbers (ideally significantly
+            less than).
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocated(System.Int32,System.Int32,System.Int32,System.Int32,Spreads.Buffers.RetainableMemoryPoolEventSource.BufferAllocatedReason)">
+            <summary>
+            Event for when a buffer is allocated by the pool.  In an ideal situation, the number
+            of BufferAllocated events is significantly smaller than the number of BufferRented and
+            BufferReturned events.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferReturned(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Event raised when a buffer is returned to the pool.  This event is raised regardless of whether
+            the returned buffer is stored or dropped.  In an ideal situation, the number of BufferReturned
+            events exactly matches the number of BufferRented events.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferTrimmed(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Event raised when we attempt to free a buffer due to inactivity or memory pressure (by no longer
+            referencing it). It is possible (although not commmon) this buffer could be rented as we attempt
+            to free it. A rent event before or after this event for the same ID, is a rare, but expected case.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainableMemoryPoolEventSource.BufferTrimPoll(System.Int32,System.Int32)">
+            <summary>
+            Event raised when we check to trim buffers.
+            </summary>
+        </member>
+        <member name="T:Spreads.Buffers.RetainedMemory`1">
+            <summary>
+            A borrowing of <see cref="T:Spreads.Buffers.RetainableMemory`1"/> that owns a reference from it.
+            </summary>
+            <remarks>
+            Use this struct carefully: it must always be explicitly disposed, otherwise underlying MemoryManager implementation
+            will never be returned to the pool and memory will leak.
+            RULE: Ownership of <see cref="T:Spreads.Buffers.RetainedMemory`1"/> is transfered in any method call without ref modifier (in modifier transfers ownership).
+            Use <see cref="M:Spreads.Buffers.RetainedMemory`1.Clone"/> method or its Slice-like overloads to create a copy of this memory and to
+            ensure that the underlying <see cref="T:Spreads.Buffers.RetainableMemory`1"/> is not returned to the pool.
+            Access to this struct is not thread-safe, only one thread could call its methods at a time.
+            </remarks>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.#ctor(System.Memory{`0})">
+            <summary>
+            Create a new RetainedMemory from Memory and pins it.
+            </summary>
+            <param name="memory"></param>
+        </member>
+        <member name="P:Spreads.Buffers.RetainedMemory`1.Length">
+            <summary>
+            Gets the number of elements in the RetainedMemory.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Slice(System.Int32)">
+            <summary>
+            Slice without incrementing the reference counter.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Slice(System.Int32,System.Int32)">
+            <summary>
+            Slice without incrementing the reference counter.
+            </summary>
+            <param name="start"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Clone">
+            <summary>
+            Create a copy and increment the reference counter.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Clone(System.Int32)">
+            <summary>
+            Create a sliced copy and increment the reference counter.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Clone(System.Int32,System.Int32)">
+            <summary>
+            Create a sliced copy and increment the reference counter.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Dispose">
+            <summary>
+            Release a reference of the underlying OwnedBuffer.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemory`1.Forget">
+            <summary>
+            Release a reference of the underlying OwnedBuffer.
+            </summary>
+        </member>
+        <member name="M:Spreads.Buffers.RetainedMemoryExtensions.ToDirectBuffer(Spreads.Buffers.RetainedMemory{System.Byte})">
+            <summary>
+            A shortcut to <see cref="T:Spreads.Buffers.DirectBuffer"/> ctor that accepts <see cref="T:Spreads.Buffers.RetainedMemory`1"/>
+            </summary>
+        </member>
+        <member name="T:Spreads.Collections.Concurrent.LockedObjectPool`1">
+            <summary>
+            Thread-safe simple object pool.
+            This pool is intended for storage and should not drop objects if there is space available.
+            Good for native resources as opposed to <see cref="T:Spreads.Collections.Concurrent.ObjectPool`1"/>, which is only good for reducing managed objects allocations.
+            </summary>
+        </member>
+        <member name="T:Spreads.Collections.Concurrent.ObjectPool`1">
+             <summary>
+             Generic implementation of object pooling pattern with predefined pool size limit. The main
+             purpose is that limited number of frequently used objects can be kept in the pool for
+             further recycling.
+            
+             Notes:
+             1) it is not the goal to keep all returned objects. Pool is not meant for storage. If there
+                is no space in the pool, extra returned objects will be dropped.
+            
+             2) it is implied that if object was obtained from a pool, the caller will return it back in
+                a relatively short time. Keeping checked out objects for long durations is ok, but
+                reduces usefulness of pooling. Just new up your own.
+            
+             Not returning objects to the pool in not detrimental to the pool's work, but is a bad practice.
+             Rationale:
+                If there is no intent for reusing the object, do not use pool - just use "new".
+             </summary>
+        </member>
+        <member name="M:Spreads.Collections.Concurrent.ObjectPool`1.Allocate">
+            <summary>
+            Produces an instance.
+            </summary>
+            <remarks>
+            Search strategy is a simple linear probing which is chosen for it cache-friendliness.
+            Note that Free will try to store recycled objects close to the start thus statistically
+            reducing how far we will typically search.
+            </remarks>
+        </member>
+        <member name="M:Spreads.Collections.Concurrent.ObjectPool`1.Free(`0)">
+            <summary>
+            Returns objects to the pool.
+            </summary>
+            <remarks>
+            Search strategy is a simple linear probing which is chosen for it cache-friendliness.
+            Note that Free will try to store recycled objects close to the start thus statistically
+            reducing how far we will typically search in Allocate.
+            </remarks>
+        </member>
+        <member name="M:Spreads.Collections.Concurrent.ObjectPool`1.ForgetTrackedObject(`0,`0)">
+             <summary>
+             Removes an object from leak tracking.
+            
+             This is called when an object is returned to the pool.  It may also be explicitly
+             called if an object allocated from the pool is intentionally not being returned
+             to the pool.  This can be of use with pooled arrays if the consumer wants to
+             return a larger array to the pool than was originally allocated.
+             </summary>
+        </member>
+        <member name="T:Spreads.DataTypes.Timestamp">
+            <summary>
+            A Timestamp stored as nanos since Unix epoch as Int64.
+            2^63: 9,223,372,036,854,780,000
+            Nanos per day: 86,400,000,000,000 (2^47)
+            Nanos per year: 31,557,600,000,000,000 (2^55)
+            292 years of nanos in 2^63 is ought to be enough for everyone (except JavaScript).
+            </summary>
+        </member>
+        <member name="M:Spreads.DataTypes.Timestamp.CompareTo(Spreads.DataTypes.Timestamp)">
+            <inheritdoc />
+        </member>
+        <member name="T:Spreads.DataTypes.TypeEnum">
+            <summary>
+            Known types and containers enumeration.
+            </summary>
+        </member>
+        <member name="F:Spreads.DataTypes.TypeEnum.DateTime">
+            <summary>
+            DatetTime UTC ticks (100ns intervals since zero) as UInt64
+            </summary>
+        </member>
+        <member name="F:Spreads.DataTypes.TypeEnum.Timestamp">
+            <summary>
+            Nanoseconds since Unix epoch as UInt64
+            </summary>
+        </member>
+        <member name="T:Spreads.Threading.AtomicCounter">
+            <summary>
+            Counts non-negative value and stores it in provided pointer in pinned/native memory.
+            </summary>
+        </member>
+        <member name="F:Spreads.Threading.AtomicCounter.Pointer">
+            <summary>
+            Value in pointer:
+            0 - not retained, could be taken from pool for temp usage with e.g. return in finally
+            > 0 - number of retained calls
+            -1 - disposed, either to object pool or GC
+            less than -1 - ~(value) is index of the next free slot in the pool
+            </summary>
+        </member>
+        <member name="M:Spreads.Threading.AtomicCounter.Decrement(System.Int32@)">
+            <summary>
+            Decrement a positive counter. Throws if counter is zero.
+            </summary>
+        </member>
+        <member name="M:Spreads.Threading.AtomicCounter.IncrementIfRetained(System.Int32@)">
+            <summary>
+            Returns new count value if incremented or zero if the current count value is zero.
+            </summary>
+        </member>
+        <member name="M:Spreads.Threading.AtomicCounter.DecrementIfOne(System.Int32@)">
+            <summary>
+            Returns zero if decremented the last reference or current count if it is more than one.
+            Throws if current count is zero.
+            </summary>
+        </member>
+        <member name="T:Spreads.Threading.AtomicCounterPool`1">
+            <summary>
+            Pool of `AtomicCounter`s backed by native memory. Avoid long-living pinned buffer in managed heap.
+            </summary>
+        </member>
+        <member name="F:Spreads.Threading.AtomicCounterPool`1._pinnedSpan">
+            <summary>
+            Internal for tests only, do not use
+            </summary>
+        </member>
+        <member name="M:Spreads.Threading.AtomicCounterPool`1.TryAcquireCounter(Spreads.Threading.AtomicCounter@)">
+            <summary>
+            Return a new AtomicCounter backed by some slot in the pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Spreads.Utils.BitUtil">
+            <summary>
+            Miscellaneous useful functions for dealing with low level bits and bytes.
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_BYTE">
+            <summary>
+            Size of a byte in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_BOOLEAN">
+            <summary>
+            Size of a boolean in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_CHAR">
+            <summary>
+            Size of a char in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_SHORT">
+            <summary>
+            Size of a short in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_INT">
+            <summary>
+            Size of an int in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_FLOAT">
+            <summary>
+            Size of a a float in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_LONG">
+            <summary>
+            Size of a long in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.SIZE_OF_DOUBLE">
+            <summary>
+            Size of a double in bytes
+            </summary>
+        </member>
+        <member name="F:Spreads.Utils.BitUtil.CACHE_LINE_LENGTH">
+            <summary>
+            Length of the data blocks used by the CPU cache sub-system in bytes.
+            </summary>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.FindNextPositivePowerOfTwo(System.Int32)">
+             <summary>
+             Fast method of finding the next power of 2 greater than or equal to the supplied value.
+            
+             If the value is &lt;= 0 then 1 will be returned.
+            
+             This method is not suitable for <seealso cref="F:System.Int32.MinValue"/> or numbers greater than 2^30.
+             </summary>
+             <param name="value"> from which to search for next power of 2 </param>
+             <returns> The next power of 2 or the value itself if it is a power of 2 </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.Align(System.Int32,System.Int32)">
+             <summary>
+             Align a value to the next multiple up of alignment.
+             If the value equals an alignment multiple then it is returned unchanged.
+             <para>
+             This method executes without branching. This code is designed to be use in the fast path and should not
+             be used with negative numbers. Negative numbers will result in undefined behavior.
+            
+             </para>
+             </summary>
+             <param name="value">     to be aligned up. </param>
+             <param name="alignment"> to be used. </param>
+             <returns> the value aligned to the next boundary. </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.FromHexByteArray(System.Byte[])">
+            <summary>
+            Generate a byte array from the hex representation of the given byte array.
+            </summary>
+            <param name="buffer"> to convert from a hex representation (in Big Endian) </param>
+            <returns> new byte array that is decimal representation of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.ToHexByteArray(System.Byte[])">
+            <summary>
+            Generate a byte array that is a hex representation of a given byte array.
+            </summary>
+            <param name="buffer"> to convert to a hex representation </param>
+            <returns> new byte array that is hex representation (in Big Endian) of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.ToHexByteArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Generate a byte array that is a hex representation of a given byte array.
+            </summary>
+            <param name="buffer"> to convert to a hex representation </param>
+            <param name="offset"> the offset into the buffer </param>
+            <param name="length"> the number of bytes to convert </param>
+            <returns> new byte array that is hex representation (in Big Endian) of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.FromHex(System.String)">
+            <summary>
+            Generate a byte array from a string that is the hex representation of the given byte array.
+            </summary>
+            <param name="value"> to convert from a hex representation (in Big Endian) </param>
+            <returns> new byte array holding the decimal representation of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.ToHex(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Generate a string that is the hex representation of a given byte array.
+            </summary>
+            <param name="buffer"> to convert to a hex representation </param>
+            <param name="offset"> the offset into the buffer </param>
+            <param name="length"> the number of bytes to convert </param>
+            <returns> new String holding the hex representation (in Big Endian) of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.ToHex(System.Byte[])">
+            <summary>
+            Generate a string that is the hex representation of a given byte array.
+            </summary>
+            <param name="buffer"> to convert to a hex representation </param>
+            <returns> new String holding the hex representation (in Big Endian) of the passed array </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.IsEven(System.Int32)">
+            <summary>
+            Is a number even.
+            </summary>
+            <param name="value"> to check. </param>
+            <returns> true if the number is even otherwise false. </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.IsPowerOfTwo(System.Int32)">
+            <summary>
+            Is a value a positive power of two.
+            </summary>
+            <param name="value"> to be checked. </param>
+            <returns> true if the number is a positive power of two otherwise false. </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.Next(System.Int32,System.Int32)">
+            <summary>
+            Cycles indices of an array one at a time in a forward fashion
+            </summary>
+            <param name="current"> value to be incremented. </param>
+            <param name="max">     value for the cycle. </param>
+            <returns> the next value, or zero if max is reached. </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.Previous(System.Int32,System.Int32)">
+            <summary>
+            Cycles indices of an array one at a time in a backwards fashion
+            </summary>
+            <param name="current"> value to be decremented. </param>
+            <param name="max">     value of the cycle. </param>
+            <returns> the next value, or max - 1 if current is zero </returns>
+        </member>
+        <member name="M:Spreads.Utils.BitUtil.IsAligned(System.Int64,System.Int32)">
+            <summary>
+            Is an address aligned on a boundary.
+            </summary>
+            <param name="address">   to be tested. </param>
+            <param name="alignment"> boundary the address is tested against. </param>
+            <returns> true if the address is on the aligned boundary otherwise false. </returns>
+            <exception cref="T:System.ArgumentException"> if the alignment is not a power of 2` </exception>
+        </member>
+        <member name="M:Spreads.Utils.IntUtil.NumberOfTrailingZeros(System.Int32)">
+            <summary>
+            Returns the number of zero bits following the lowest-order ("rightmost")
+            one-bit in the two's complement binary representation of the specified
+            {@code int} value.  Returns 32 if the specified value has no
+            one-bits in its two's complement representation, in other words if it is
+            equal to zero.
+            </summary>
+            <param name="i"> the value whose number of trailing zeros is to be computed </param>
+            <returns> the number of zero bits following the lowest-order ("rightmost")
+                one-bit in the two's complement binary representation of the
+                specified {@code int} value, or 32 if the value is equal
+                to zero.
+            @since 1.5 </returns>
+        </member>
+        <member name="M:Spreads.Utils.IntUtil.NumberOfLeadingZeros(System.Int32)">
+             <summary>
+             Note Olivier: Direct port of the Java method Integer.NumberOfLeadingZeros
+            
+             Returns the number of zero bits preceding the highest-order
+             ("leftmost") one-bit in the two's complement binary representation
+             of the specified {@code int} value.  Returns 32 if the
+             specified value has no one-bits in its two's complement representation,
+             in other words if it is equal to zero.
+            
+             <para>Note that this method is closely related to the logarithm base 2.
+             For all positive {@code int} values x:
+             &lt;ul&gt;
+             &lt;li&gt;floor(log&lt;sub&gt;2&lt;/sub&gt;(x)) = {@code 31 - numberOfLeadingZeros(x)}
+             &lt;li&gt;ceil(log&lt;sub&gt;2&lt;/sub&gt;(x)) = {@code 32 - numberOfLeadingZeros(x - 1)}
+             &lt;/ul&gt;
+            
+             </para>
+             </summary>
+             <param name="i"> the value whose number of leading zeros is to be computed </param>
+             <returns> the number of zero bits preceding the highest-order
+                 ("leftmost") one-bit in the two's complement binary representation
+                 of the specified {@code int} value, or 32 if the value
+                 is equal to zero.
+             </returns>
+        </member>
+    </members>
+</doc>
