@@ -1,8 +1,0 @@
-D:\Visual Studio Projects\LeashMod\LeashMod\obj\Debug\LeashMod.csproj.CoreCompileInputs.cache
-G:\Games\SteamLibrary\steamapps\common\VRChat\Mods\LeashMod.Mod.dll
-G:\Games\SteamLibrary\steamapps\common\VRChat\Mods\LeashMod.Mod.pdb
-G:\Games\SteamLibrary\steamapps\common\VRChat\Dev\LeashMod.pdb
-D:\Visual Studio Projects\LeashMod\LeashMod\obj\Debug\LeashMod.dll
-D:\Visual Studio Projects\LeashMod\LeashMod\obj\Debug\LeashMod.pdb
-G:\Games\SteamLibrary\steamapps\common\VRChat\Dev\LeashMod.dll
-D:\Visual Studio Projects\LeashMod\LeashMod\obj\Debug\LeashMod.csproj.AssemblyReference.cache
